@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Typography } from "@mui/material";
 import {
   Container,
@@ -20,118 +21,124 @@ import { theme } from "./theme";
 
 function App() {
   return (
-    <Container
-      sx={{
-        backgroundImage: `url(${BackgroundImage})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        height: "100vh",
-      }}
-      maxWidth="xl"
-    >
-      <PageContent
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Pack & Print</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+      <Container
         sx={{
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          [theme.breakpoints.down("sm")]: {
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          },
+          backgroundImage: `url(${BackgroundImage})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          height: "100vh",
         }}
+        maxWidth="xl"
       >
-        <Logo src={ComapnyLogo} alt="comapny_logo" />
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <Typography
-            fontFamily={"cursive"}
-            variant="h2"
-            gutterBottom
-            sx={{ fontSize: 45 }}
-          >
-            Pack & Print
-          </Typography>
-        </Box>
-        <Box
+        <PageContent
           sx={{
             height: "100%",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
-            paddingBottom: "200px",
+            [theme.breakpoints.down("sm")]: {
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            },
           }}
         >
-          <Typography
-            variant="h3"
-            gutterBottom
+          <Logo src={ComapnyLogo} alt="comapny_logo" />
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
+            <Typography
+              fontFamily={"cursive"}
+              variant="h2"
+              gutterBottom
+              sx={{ fontSize: 45 }}
+            >
+              Pack & Print
+            </Typography>
+          </Box>
+          <Box
             sx={{
-              [theme.breakpoints.down("sm")]: {
-                fontSize: 25,
-              },
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              paddingBottom: "200px",
             }}
           >
-            CONTACT US
-          </Typography>
-          <LabelWrapper
-            sx={{
-              [theme.breakpoints.down("sm")]: {
-                marginLeft: 0,
-              },
-            }}
-          >
-            <Label
-              variant="h6"
+            <Typography
+              variant="h3"
+              gutterBottom
               sx={{
                 [theme.breakpoints.down("sm")]: {
-                  fontSize: 18,
+                  fontSize: 25,
                 },
               }}
             >
-              {" "}
-              Email:
-            </Label>
-            <Content
-              variant="h6"
+              CONTACT US
+            </Typography>
+            <LabelWrapper
               sx={{
                 [theme.breakpoints.down("sm")]: {
-                  fontSize: 18,
+                  marginLeft: 0,
                 },
               }}
             >
-              alimehdi@hotmail.com
-            </Content>
-          </LabelWrapper>
-          <LabelWrapper
-            sx={{
-              [theme.breakpoints.down("sm")]: {
-                marginLeft: 0,
-              },
-            }}
-          >
-            <Label
-              variant="h6"
+              <Label
+                variant="h6"
+                sx={{
+                  [theme.breakpoints.down("sm")]: {
+                    fontSize: 18,
+                  },
+                }}
+              >
+                {" "}
+                Email:
+              </Label>
+              <Content
+                variant="h6"
+                sx={{
+                  [theme.breakpoints.down("sm")]: {
+                    fontSize: 18,
+                  },
+                }}
+              >
+                alimehdi@hotmail.com
+              </Content>
+            </LabelWrapper>
+            <LabelWrapper
               sx={{
                 [theme.breakpoints.down("sm")]: {
-                  fontSize: 18,
+                  marginLeft: 0,
                 },
               }}
             >
-              {" "}
-              Phone:
-            </Label>
-            <Content
-              variant="h6"
-              sx={{
-                [theme.breakpoints.down("sm")]: {
-                  fontSize: 18,
-                },
-              }}
-            >
-              03/759 272
-            </Content>
-          </LabelWrapper>
-          {/* <LabelWrapper
+              <Label
+                variant="h6"
+                sx={{
+                  [theme.breakpoints.down("sm")]: {
+                    fontSize: 18,
+                  },
+                }}
+              >
+                {" "}
+                Phone:
+              </Label>
+              <Content
+                variant="h6"
+                sx={{
+                  [theme.breakpoints.down("sm")]: {
+                    fontSize: 18,
+                  },
+                }}
+              >
+                03/759 272
+              </Content>
+            </LabelWrapper>
+            {/* <LabelWrapper
             sx={{
               [theme.breakpoints.down("sm")]: {
                 marginLeft: 0,
@@ -160,36 +167,37 @@ function App() {
               Fakhreddine st, Minet el Hosn, Beirut, Lebanon
             </Content>
           </LabelWrapper> */}
-          <Box
-            sx={{
-              width: "25%",
-              paddingTop: "20px",
-              paddingLeft: "15px",
-              display: "flex",
-              justifyContent: "start",
-              [theme.breakpoints.down("sm")]: {
-                width: "100%",
-                justifyContent: "flex-start",
-                paddingLeft: "0px",
-              },
-            }}
-          >
-            {/* <FacebookIcon sx={{ cursor: "pointer" }} fontSize="large" /> */}
-            <InstagramIcon
-              sx={{ cursor: "pointer" }}
-              fontSize="large"
-              onClick={() =>
-                window.open(
-                  "https://instagram.com/pack_and_print?igshid=YmMyMTA2M2Y=",
-                  "_blank"
-                )
-              }
-            />
-            {/* <TwitterIcon sx={{ cursor: "pointer" }} fontSize="large" /> */}
+            <Box
+              sx={{
+                width: "25%",
+                paddingTop: "20px",
+                paddingLeft: "15px",
+                display: "flex",
+                justifyContent: "start",
+                [theme.breakpoints.down("sm")]: {
+                  width: "100%",
+                  justifyContent: "flex-start",
+                  paddingLeft: "0px",
+                },
+              }}
+            >
+              {/* <FacebookIcon sx={{ cursor: "pointer" }} fontSize="large" /> */}
+              <InstagramIcon
+                sx={{ cursor: "pointer" }}
+                fontSize="large"
+                onClick={() =>
+                  window.open(
+                    "https://instagram.com/pack_and_print?igshid=YmMyMTA2M2Y=",
+                    "_blank"
+                  )
+                }
+              />
+              {/* <TwitterIcon sx={{ cursor: "pointer" }} fontSize="large" /> */}
+            </Box>
           </Box>
-        </Box>
-      </PageContent>
-    </Container>
+        </PageContent>
+      </Container>
+    </>
   );
 }
 
