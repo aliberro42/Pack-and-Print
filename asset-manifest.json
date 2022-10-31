@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Pack-and-Print/static/css/main.073c9b0a.css",
-    "main.js": "/Pack-and-Print/static/js/main.310d7018.js",
+    "main.js": "/Pack-and-Print/static/js/main.45683c59.js",
     "static/js/787.ec9a481d.chunk.js": "/Pack-and-Print/static/js/787.ec9a481d.chunk.js",
     "static/media/background.jpeg": "/Pack-and-Print/static/media/background.c3cec6e4e158d543b238.jpeg",
     "static/media/logo.png": "/Pack-and-Print/static/media/logo.b998f4c50f2df3b3143a.png",
     "index.html": "/Pack-and-Print/index.html",
     "main.073c9b0a.css.map": "/Pack-and-Print/static/css/main.073c9b0a.css.map",
-    "main.310d7018.js.map": "/Pack-and-Print/static/js/main.310d7018.js.map",
+    "main.45683c59.js.map": "/Pack-and-Print/static/js/main.45683c59.js.map",
     "787.ec9a481d.chunk.js.map": "/Pack-and-Print/static/js/787.ec9a481d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.310d7018.js"
+    "static/js/main.45683c59.js"
   ]
 }
